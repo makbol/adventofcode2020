@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const input = process.argv[2];
-const output = process.argv[2];
+const output = process.argv[3];
 
 (async() => {
     const file = await fs.readFile(path.resolve(__dirname, input), 'utf-8');
