@@ -4,9 +4,9 @@ const input = process.argv[2];
 const output = process.argv[3];
 
 (async() => {
-    function transformer(val) {
-        return parseInt(val);
+    function transformer(file) {
+        const lines = file.split('\n');
+        return lines.map(parseInt);
     }
-
     await inputTransformer(input, output, transformer);
 })();
