@@ -8,6 +8,7 @@ const output = process.argv[3];
         const lines = file.split('\n');
         return lines
             .map(line => {
+                return line;
             });
     }
     await inputTransformer(input, output, transformer);
