@@ -1,9 +1,9 @@
-function* columnIterator (jump, limit) {
+function* columnIterator(jump, limit) {
     let start = 0;
-    while(true) {
+    while (true) {
         yield start;
 
-        if(limit - start <= jump) {
+        if (limit - start <= jump) {
             start = jump - (limit - start);
         } else {
             start += jump;
@@ -13,13 +13,13 @@ function* columnIterator (jump, limit) {
 
 function solution(input, rowIncrement, columnIncrement) {
     let trees = 0;
-    const TREE = '#';
+    const TREE = "#";
 
     const iterator = columnIterator(columnIncrement, input[0].length);
 
-    for(let row = 0; row < input.length; row+= rowIncrement) {
+    for (let row = 0; row < input.length; row += rowIncrement) {
         const column = iterator.next().value;
-        if(input[row][column] === TREE) {
+        if (input[row][column] === TREE) {
             trees++;
         }
     }

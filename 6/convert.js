@@ -1,15 +1,15 @@
-const inputTransformer = require('../tools/inputTransformer');
+const inputTransformer = require("../tools/inputTransformer");
 
 const input = process.argv[2];
 const output = process.argv[3];
 
-(async() => {
+(async () => {
     let group = [];
     function transformer(file) {
-        const lines = file.split('\n');
+        const lines = file.split("\n");
         return lines
-            .map(line => {
-                if(line) {
+            .map((line) => {
+                if (line) {
                     group.push(line);
                 } else {
                     const copy = [...group];
@@ -17,7 +17,7 @@ const output = process.argv[3];
                     return copy;
                 }
             })
-            .filter(line => line);
+            .filter((line) => line);
     }
     await inputTransformer(input, output, transformer);
 })();

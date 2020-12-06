@@ -9,20 +9,19 @@ module.exports = function three(input) {
 
     let iterations = 0;
 
-    for(let i = 0; i < input.length - 2; i++) {
-
+    for (let i = 0; i < input.length - 2; i++) {
         const set = new Set();
         let sum = TOTAL_SUM - ascending[i];
 
-        for(let j = i + 1; j < input.length; j++) {
+        for (let j = i + 1; j < input.length; j++) {
             iterations++;
-            if(set.has(sum - ascending[j])) {
+            if (set.has(sum - ascending[j])) {
                 return {
                     numbers: [ascending[i], ascending[j], sum - ascending[j]],
                     iterations,
-                }
+                };
             }
             set.add(ascending[j]);
         }
     }
-}
+};

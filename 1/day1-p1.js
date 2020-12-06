@@ -9,17 +9,17 @@ module.exports = function two(input) {
 
     let iterations = 0;
 
-    for(let i = 0; i < input.length; i++) {
-        for(let j = input.length; j >= 0; j--) {
+    for (let i = 0; i < input.length; i++) {
+        for (let j = input.length; j >= 0; j--) {
             let a = ascending[i];
             let b = ascending[j];
             iterations++;
-            if(a + b === TOTAL_SUM) {
+            if (a + b === TOTAL_SUM) {
                 return {
                     numbers: [a, b],
                     iterations,
-                }
+                };
             }
         }
     }
-}
+};

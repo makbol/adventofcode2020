@@ -1,20 +1,20 @@
 [
-  {
-    "low": 1,
-    "high": 3,
-    "letter": "a",
-    "pass": "abcde"
-  },
-  {
-    "low": 1,
-    "high": 3,
-    "letter": "b",
-    "pass": "cdefg"
-  },
-  {
-    "low": 2,
-    "high": 9,
-    "letter": "c",
-    "pass": "ccccccccc"
-  }
+    {
+        "low": 1,
+        "high": 3,
+        "letter": "a",
+        "pass": "abcde"
+    },
+    {
+        "low": 1,
+        "high": 3,
+        "letter": "b",
+        "pass": "cdefg"
+    },
+    {
+        "low": 2,
+        "high": 9,
+        "letter": "c",
+        "pass": "ccccccccc"
+    }
 ]
